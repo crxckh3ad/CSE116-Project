@@ -10,6 +10,7 @@ public class LinkedListNode<T> {
         this.next = next;
     }
 
+
     public T getValue() {
         return this.value;
     }
