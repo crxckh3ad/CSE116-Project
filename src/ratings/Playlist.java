@@ -133,37 +133,6 @@ public class Playlist {
         }
     }
 }
-package ratings.datastructures;
 
-import ratings.Song;
-
-public class SongTitleComparator extends Comparator<Song> {
-    @Override
-    public boolean compare(Song song1, Song song2) {
-        String title1 = song1.getTitle();
-        String title2 = song2.getTitle();
-        int comparisonResult = title2.compareToIgnoreCase(title1);
-        if (comparisonResult > 0) {
-            return true;
-        }
-        return false;
-    }
-}
-
-package ratings.datastructures;
-
-import ratings.Song;
-
-public class SongBayesianRatingComparator extends Comparator<Song> {
-    @Override
-    public boolean compare(Song song1, Song song2) {
-        double rating1 = song1.bayesianAverageRating(2, 3);
-        double rating2 = song2.bayesianAverageRating(2, 3);
-        if (rating1 > rating2) {
-            return true;
-        }
-        return false;
-    }
-}
 
 
